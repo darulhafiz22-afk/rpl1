@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id"> 
+ <head></head> 
+ <body> 
+  <h1> Hello </h1> 
+  <div>
+    This is a html example from Dcoder, 
+   <br> have fun. :) 
+  </div> 
+  <meta charset="UTF-8"> 
+  <title>Ransomware by (project ranx)</title> 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      color: red;
+      background: black url('bg.jpg') center/cover no-repeat fixed;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: blink 1s infinite;
+    }
+
+    .glitch {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: red;
+      position: relative;
+      animation: glitch 1s infinite;
+    }
+
+    .warning {
+      margin: 20px auto;
+      font-size: 1.3rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .timer {
+      font-size: 2rem;
+      background: red;
+      color: black;
+      padding: 12px 30px;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: inline-block;
+    }
+
+    .password-box {
+      margin-top: 30px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid red;
+      background: black;
+      color: red;
+      font-family: inherit;
+      font-size: 1rem;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: red;
+      color: black;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .info {
+      font-size: 1.1rem;
+      margin-top: 40px;
+      color: #ff4;
+      min-height: 1.5em;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #00fff7, -2px -2px #ff00ff;
+      }
+      25% {
+        text-shadow: -1px 1px #ff00ff, 1px -1px #00fff7;
+      }
+      50% {
+        text-shadow: 3px -3px #00fff7, -3px 3px #ff00ff;
+      }
+      75% {
+        text-shadow: 1px 2px #ff00ff, -2px -1px #00fff7;
+      }
+      100% {
+        text-shadow: 2px 2px #00fff7, -2px -2px #ff00ff;
+      }
+    }
+  </style> <!-- Suara --> 
+  <audio autoplay loop> 
+   <source src="malware.mp3" type="audio/mpeg"> 
+  </audio> 
+  <h1>SISTEM TERKUNCI</h1> 
+  <div class="glitch">
+    Ransomware by (RANXXXX) 
+  </div> 
+  <div class="warning">
+    Semua file Anda telah dienkripsi! 
+   <br> Transfer Rp500.000 ke WITA (cash) untuk mendapatkan kembali akses file Anda. 
+   <br> Atau hubungi <strong>@RANZZZ</strong> di IG untuk bantuan lebih lanjut. 
+  </div> 
+  <div class="timer" id="countdown">
+    30 Hari 00:00:00 
+  </div> 
+  <div class="password-box"> 
+   <input type="password" id="password" placeholder="Masukkan password..."> <button onclick="checkPassword()">Buka</button> 
+  </div> 
+  <div class="info" id="info"></div> 
+  <script>
+    // Timer 30 hari
+    let totalSeconds = 30 * 24 * 60 * 60;
+    const countdown = document.getElementById("countdown");
+
+    function updateTimer() {
+      const days = String(Math.floor(totalSeconds / (60 * 60 * 24))).padStart(2, '0');
+      const hours = String(Math.floor((totalSeconds % (60 * 60 * 24)) / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      countdown.textContent = `${days} Hari ${hours}:${minutes}:${seconds}`;
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        countdown.textContent = "WAKTU HABIS";
+      }
+    }
+
+    setInterval(updateTimer, 1000);
+
+    // Password Checker
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      const info = document.getElementById("info");
+      document.getElementById("password").value = "";
+
+      if (input === "memeq123") {
+        info.textContent = "Password benar. Sistem terbuka.";
+        info.style.color = "#0f0";
+      } else {
+        info.textContent = "Wkwkw, tebus dulu lah enak aja #okaiivone";
+        info.style.color = "#ff4";
+      }
+    }
+  </script> 
+ 
+</body></html>
